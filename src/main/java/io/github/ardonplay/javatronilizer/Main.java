@@ -32,7 +32,7 @@ public class Main {
             FieldPattern fieldPattern = new FieldPattern(new DefaultModel());
             Matcher matcher = fieldPattern.matcher(st.toString());
 
-            while (matcher.find()) {
+            while (matcher.find())  {
                 System.out.println(st.substring(matcher.start()+1, matcher.end()-1));
             }
 
