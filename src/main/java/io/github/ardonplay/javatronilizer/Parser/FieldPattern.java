@@ -6,7 +6,11 @@ import java.util.regex.Pattern;
 
 public class FieldPattern extends AbstractPattern{
 
+<<<<<<< HEAD
     protected FieldPattern(Model model) {
+=======
+    public FieldPattern(Model model) {
+>>>>>>> 0832a93 (dev: initial commit)
         super(model, Pattern.compile("\\{(.*?)\\}"));
     }
 
