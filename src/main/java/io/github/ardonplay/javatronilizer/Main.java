@@ -1,6 +1,9 @@
 package io.github.ardonplay.javatronilizer;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
 import io.github.ardonplay.javatronilizer.models.DefaultModel;
 import io.github.ardonplay.javatronilizer.models.Model;
 import io.github.ardonplay.javatronilizer.parser.patterns.FieldPattern;
@@ -21,16 +24,24 @@ public class Main {
             String line;
             while ((line = br.readLine()) != null) {
                st.append(line);
+               st.append(System.getProperty("line.separator"));
             }
             is.close();
-            User user = new User("Александр я ебался в жопу блять ");
+            User user = new User("Не ебу как оно работает, но оно блять работает");
+
+            List<User> users = new ArrayList<>();
+            users.add(new User("абоба"));
+            users.add(new User("лупа"));
+
             Model model = new DefaultModel();
             model.addAttribute("title", "ебобошка");
-            model.addAttribute("user",user );
+            model.addAttribute("user",user);
+            model.addAttribute("users", users);
+
             FieldPattern pattern = new FieldPattern(model);
             ListPattern listPattern = new ListPattern(model);
-            listPattern.transform(st.toString());
-            //System.out.println(pattern.transform(st.toString()));
+
+            System.out.println(pattern.transform(listPattern.transform(st.toString())));
 
         }
     }

@@ -33,16 +33,6 @@ public class FieldPattern extends AbstractPattern {
         return transformed;
     }
 
-    private Object recursiveGet(String[] splittedField, Object data) throws NoSuchFieldException, IllegalAccessException {
-        if (splittedField.length > 1) {
-            Class<?> clazz = data.getClass();
-            Field field = clazz.getField(splittedField[1]);
-            data = field.get(data);
-            String[] remainingField = new String[splittedField.length - 1];
-            System.arraycopy(splittedField, 1, remainingField, 0, remainingField.length);
-            return recursiveGet(remainingField, data);
-        }
-        return data;
-    }
+
 
 }
