@@ -1,12 +1,14 @@
 package io.github.ardonplay.javatronilizer;
 
 import java.io.*;
-import io.github.ardonplay.javatronilizer.Model.DefaultModel;
-import io.github.ardonplay.javatronilizer.Parser.FieldPattern;
+import io.github.ardonplay.javatronilizer.models.DefaultModel;
+import io.github.ardonplay.javatronilizer.models.Model;
+import io.github.ardonplay.javatronilizer.parser.patterns.FieldPattern;
+import io.github.ardonplay.javatronilizer.parser.patterns.ListPattern;
 
-import java.util.regex.Matcher;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
        Main instance = new Main();
 
@@ -21,12 +23,14 @@ public class Main {
                st.append(line);
             }
             is.close();
-            FieldPattern fieldPattern = new FieldPattern(new DefaultModel());
-            Matcher matcher = fieldPattern.matcher(st.toString());
-
-            while (matcher.find())  {
-                System.out.println(st.substring(matcher.start()+1, matcher.end()-1));
-            }
+            User user = new User("Александр я ебался в жопу блять ");
+            Model model = new DefaultModel();
+            model.addAttribute("title", "ебобошка");
+            model.addAttribute("user",user );
+            FieldPattern pattern = new FieldPattern(model);
+            ListPattern listPattern = new ListPattern(model);
+            listPattern.transform(st.toString());
+            //System.out.println(pattern.transform(st.toString()));
 
         }
     }

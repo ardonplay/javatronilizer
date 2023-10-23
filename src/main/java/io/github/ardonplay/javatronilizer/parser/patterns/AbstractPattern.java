@@ -1,5 +1,5 @@
-package io.github.ardonplay.javatronilizer.Parser;
-import io.github.ardonplay.javatronilizer.Model.Model;
+package io.github.ardonplay.javatronilizer.parser.patterns;
+import io.github.ardonplay.javatronilizer.models.Model;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,7 +15,7 @@ public abstract class AbstractPattern {
         this.pattern = pattern;
     }
 
-    public abstract String transform();
+    public abstract String transform(String source);
 
     public Matcher matcher(String expression) {
         this.matcher = pattern.matcher(expression);

@@ -1,4 +1,4 @@
-package io.github.ardonplay.javatronilizer.Model;
+package io.github.ardonplay.javatronilizer.models;
 
 import org.jetbrains.annotations.Nullable;
 
