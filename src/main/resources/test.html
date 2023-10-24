@@ -10,5 +10,11 @@
             <div>{user.subclass.username}</div>
     }}
     {user.subclass.username}
+
+    {if user.subclass.username == "admin"}
+    <div>Привет, администратор!</div>
+    {else}
+    <div>Привет, обычный пользователь!</div>
+    {/if}
 </body>
 </html>

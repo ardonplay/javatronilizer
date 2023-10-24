@@ -1,4 +1,4 @@
-package io.github.ardonplay.javatronilizer.parser.patterns;
+package io.github.ardonplay.javatronilizer.templater.patterns;
 
 import io.github.ardonplay.javatronilizer.models.DefaultModel;
 import io.github.ardonplay.javatronilizer.models.Model;
@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
-import static javax.swing.UIManager.put;
 
 public class ListPattern extends AbstractPattern {
     public ListPattern(Model model) {

@@ -6,8 +6,10 @@ import java.util.List;
 
 import io.github.ardonplay.javatronilizer.models.DefaultModel;
 import io.github.ardonplay.javatronilizer.models.Model;
-import io.github.ardonplay.javatronilizer.parser.patterns.FieldPattern;
-import io.github.ardonplay.javatronilizer.parser.patterns.ListPattern;
+import io.github.ardonplay.javatronilizer.templater.Templater;
+import io.github.ardonplay.javatronilizer.templater.patterns.FieldPattern;
+import io.github.ardonplay.javatronilizer.templater.patterns.IfElsePattern;
+import io.github.ardonplay.javatronilizer.templater.patterns.ListPattern;
 
 
 public class Main {
@@ -38,10 +40,10 @@ public class Main {
             model.addAttribute("user",user);
             model.addAttribute("users", users);
 
-            FieldPattern pattern = new FieldPattern(model);
-            ListPattern listPattern = new ListPattern(model);
+            Templater templater = new Templater(st.toString());
+            templater.addPattern(new ListPattern(model),new IfElsePattern(model));
 
-            System.out.println(pattern.transform(listPattern.transform(st.toString())));
+            System.out.println(templater.transform());
 
         }
     }

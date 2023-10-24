@@ -1,11 +1,7 @@
-package io.github.ardonplay.javatronilizer.parser.patterns;
+package io.github.ardonplay.javatronilizer.templater.patterns;
 
 import io.github.ardonplay.javatronilizer.models.Model;
-import io.github.ardonplay.javatronilizer.parser.patterns.AbstractPattern;
 
-import java.lang.reflect.Field;
-import java.util.Arrays;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class FieldPattern extends AbstractPattern {
