@@ -1,29 +1,26 @@
 package io.github.ardonplay.javatronilizer.templater;
 
+import io.github.ardonplay.javatronilizer.models.Model;
 import io.github.ardonplay.javatronilizer.templater.patterns.AbstractPattern;
+import io.github.ardonplay.javatronilizer.templater.patterns.FieldPattern;
+import io.github.ardonplay.javatronilizer.templater.patterns.IfElsePattern;
+import io.github.ardonplay.javatronilizer.templater.patterns.ListPattern;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 @Getter
 @Setter
-@NoArgsConstructor
 @Slf4j
 public class Templater {
     private String source;
 
-    private final List<AbstractPattern> patterns = new ArrayList<>();
+    private final List<AbstractPattern> patterns;
 
-    public Templater(String source) {
+    public Templater(String source, Model model) {
         this.source = source;
-    }
-
-    public void addPattern(AbstractPattern... patterns) {
-        this.patterns.addAll(Arrays.asList(patterns));
+        this.patterns = List.of(new ListPattern(model), new IfElsePattern(model), new FieldPattern(model));
     }
 
     public String transform() {
