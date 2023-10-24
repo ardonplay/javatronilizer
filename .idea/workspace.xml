@@ -5,20 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ba6af92-57b9-4b44-9e43-4d0e186b67ee" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/IfElsePattern.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/GrepConsole.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/Templater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/parser/patterns/AbstractPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/AbstractPattern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/parser/patterns/FieldPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/FieldPattern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/parser/patterns/ListPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/ListPattern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/Templater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/Templater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/AbstractPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/AbstractPattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/FieldPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/FieldPattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/IfElsePattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/IfElsePattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/ListPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/ardonplay/javatronilizer/templater/patterns/ListPattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feat/IfElsePattern",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,16 +80,57 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="graalvm-ce-17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="io.github.ardonplay.javatronilizer.Main" />
-      <module name="javatronilizer.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.javatronilizer [build]">
+    <configuration name="javatronilizer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
+    <configuration name="javatronilizer [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.javatronilizer [build]" />
+        <item itemvalue="Gradle.javatronilizer [clean]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -79,6 +142,7 @@
       <updated>1698083110888</updated>
       <workItem from="1698083113442" duration="551000" />
       <workItem from="1698083694167" duration="4167000" />
+      <workItem from="1698136624871" duration="2797000" />
     </task>
     <servers />
   </component>

@@ -2,11 +2,17 @@ package io.github.ardonplay.javatronilizer.templater;
 
 import io.github.ardonplay.javatronilizer.templater.patterns.AbstractPattern;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 @Getter
+@Setter
+@NoArgsConstructor
+@Slf4j
 public class Templater {
     private String source;
 
@@ -21,6 +27,7 @@ public class Templater {
     }
 
     public String transform() {
+        log.info("Starting transforming {}", source);
         for (AbstractPattern pattern : patterns) {
             source = pattern.transform(source);
         }
