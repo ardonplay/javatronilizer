@@ -1,11 +1,14 @@
 package io.github.ardonplay.javatronilizer.templater.patterns;
 
+import io.github.ardonplay.javatronilizer.AttributeNotFoundException;
 import io.github.ardonplay.javatronilizer.models.DefaultModel;
 import io.github.ardonplay.javatronilizer.models.Model;
+import io.github.ardonplay.javatronilizer.templater.Templater;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -17,11 +20,10 @@ public class ListPattern extends AbstractPattern {
     }
 
     @Override
-    public String transform(String source) {
+    public String transform(String source) throws AttributeNotFoundException {
         matcher = matcher(source);
         String transformed = source;
-        Model fieldPatternModel = new DefaultModel().addAllAttributes(model.asMap());
-        FieldPattern pattern = new FieldPattern(fieldPatternModel);
+        Model subModel = new DefaultModel().addAllAttributes(model.asMap());
         List<String> transformedExpressions = new ArrayList<>();
         while (matcher.find()) {
             String path = source.substring(matcher.start(), matcher.end());
@@ -29,10 +31,14 @@ public class ListPattern extends AbstractPattern {
             String substring = path.substring(1, path.length() - 1);
             String entityName = getListEntityName(substring);
             List<?> list = (List<?>) model.getAttribute(getListName(substring));
+            if(list == null){
+                throw new AttributeNotFoundException();
+            }
+            Templater subTemplater = new Templater(getAttributeField(substring), subModel);
             for (Object o : list) {
-                fieldPatternModel.addAttribute(entityName, o);
-                transformedExpressions.add(pattern.transform(getAttributeField(substring)));
-                fieldPatternModel.asMap().remove(entityName);
+                subModel.addAttribute(entityName, o);
+                transformedExpressions.add(subTemplater.transform());
+                subModel.asMap().remove(entityName);
             }
             transformed = transformed.replace(path, transformedExpressions.stream().map(String::valueOf)
                     .collect(Collectors.joining("", "", "")));

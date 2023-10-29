@@ -1,5 +1,6 @@
 package io.github.ardonplay.javatronilizer.templater.patterns;
 
+import io.github.ardonplay.javatronilizer.AttributeNotFoundException;
 import io.github.ardonplay.javatronilizer.models.Model;
 import lombok.extern.slf4j.Slf4j;
 
